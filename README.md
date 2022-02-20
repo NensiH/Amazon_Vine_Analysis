@@ -14,8 +14,18 @@ The purpose of the project is to analyze Amazon reviews written by members of th
 - Data Source: [Amazon Review datasets](https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt), [Video Games Review dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Video_Games_v1_00.tsv.gz)
 
 ## Results: 
-During this analysis, I wanted to answer a few key questions:
 
+The Vine table was exported from pgAdmin and Python Pandas was used against the data. The Vine table contained 1785997 rows of data.
+
+<img width="668" alt="Screen Shot 2022-02-19 at 6 43 15 PM" src="https://user-images.githubusercontent.com/92277581/154824013-f3077bc9-515f-4ed8-a9d5-e83261aba31f.png">
+
+The Vine table data was transformed to show only reviews where there were 20 or more reviews for the product. This new table created using PostgreSQL reduced the dataset to 65379 rows of video game Amazon reviews.
+
+<img width="893" alt="Screen Shot 2022-02-19 at 6 48 51 PM" src="https://user-images.githubusercontent.com/92277581/154824128-966772ed-7ae5-4c64-a537-bcf5304e6c12.png">
+
+
+
+During this analysis, I wanted to answer a few key questions:
 
 ### **Total number of reviews**
 
@@ -40,8 +50,8 @@ During this analysis, I wanted to answer a few key questions:
   
 <img width="433" alt="Screen Shot 2022-02-18 at 9 34 10 AM" src="https://user-images.githubusercontent.com/92277581/154815175-67e66a5e-4dc4-49bf-bc85-8adda4e7bca1.png">
   
-Further more we have analyzed, There are more than 20 total votes and the percentage of helpful votes is equal or greater than 50. This selection was made in order to pick reviews that are more likely to be helpful.
 
 ## Summary: 
 After looking that the results, I would conclude that there is a positivity bias for reviews in the Vine program. 37% of the reviews in the Vine program were 5 stars reviews whereas the percentage in the non-Vine reviews is 57%. This describes a positivity bias for reviews in the Vine program.
-Additionally we could analyse the statistical distribution (mean, median and mode) of the star rating for the Vine and non-Vine reviews.
+
+Additionally we could analyse the statistical distribution (mean, median and mode) of the star rating for the Vine and non-Vine reviews. It would also be interesting to determine if male or female are more likely to leave a review in general versus how likely are they to leave a 5-star review as a Vine member or unpaid reviews.
